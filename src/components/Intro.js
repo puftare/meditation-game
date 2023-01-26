@@ -11,8 +11,20 @@ class Intro extends Component {
         <div className="zen-zone-intro">
           <h1>Welcome to The Meditation Game.</h1>
           <p>
-            A minimalistic meditation game area built by Martin Potkonjak,
-            designed to calm you down! Feel the Meditation!
+            A minimalistic meditation game built by{" "}
+            <a
+              href="https://github.com/puftare"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontWeight: 700,
+                textDecoration: "none",
+                fontSize: "20px",
+              }}
+            >
+              Martin Potkonjak
+            </a>
+            , designed to calm you down! Feel the Meditation!
           </p>
           <Link to="/games">
             <button>Let's get started</button>

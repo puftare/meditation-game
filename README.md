@@ -2,8 +2,6 @@
 
 Game made for short work breaks and relaxation
 
-### The Games
-
 ### Start Meditating
 
 1. git clone `https://github.com/puftare/meditation-game.git`

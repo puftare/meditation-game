@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Switch, Route } from "react-router-dom";
 
-import Game from "./components/Game.js";
-import Intro from "./components/Intro.js";
+import Game from "./components/Game";
+import StartGame from "./components/StartGame";
 import SelectGameType from "./components/SelectGameType";
 import SelectGameDuration from "./components/SelectGameDuration";
-import Reflection from "./components/Reflection.js";
+import StartAgain from "./components/StartAgain";
 
 class App extends Component {
   constructor(props) {
@@ -45,9 +45,9 @@ class App extends Component {
                         path="/"
                         render={() =>
                           this.state.currentPage === "intro" ? (
-                            <Intro />
+                            <StartGame />
                           ) : (
-                            <Reflection totalTime={this.state.totalTime} />
+                            <StartAgain totalTime={this.state.totalTime} />
                           )
                         }
                       />
@@ -65,7 +65,7 @@ class App extends Component {
                           ) ? (
                             <SelectGameDuration game={match.params.game} />
                           ) : (
-                            <Intro />
+                            <StartGame />
                           )
                         }
                       />
@@ -87,11 +87,11 @@ class App extends Component {
                               <SelectGameDuration game={match.params.game} />
                             )
                           ) : (
-                            <Intro />
+                            <StartGame />
                           )
                         }
                       />
-                      <Route path="*" render={() => <Intro />} />
+                      <Route path="*" render={() => <StartGame />} />
                     </Switch>
                   </CSSTransition>
                 </TransitionGroup>

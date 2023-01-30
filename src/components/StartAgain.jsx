@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/Intro.css";
 import logo from "../assets/Yin_yang.svg.png";
 
-class Reflection extends Component {
+class StartAgain extends Component {
   render() {
     let totalSeconds = this.props.totalTime / 1000;
     let totalMinutes = Math.floor(totalSeconds / 60);
@@ -27,4 +27,4 @@ class Reflection extends Component {
   }
 }
 
-export default Reflection;
+export default StartAgain;

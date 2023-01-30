@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-class SelectGame extends Component {
+class SelectGameType extends Component {
   render() {
     return (
       <section className="center vertical">
@@ -22,4 +22,4 @@ class SelectGame extends Component {
   }
 }
 
-export default SelectGame;
+export default SelectGameType;

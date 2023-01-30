@@ -1,8 +1,8 @@
 import React from "react";
-import GameSwirl from "./GameSwirl.js";
-import GameSwitch from "./GameSwitch.js";
-import GameBreak from "./GameBreak.js";
-import Intro from "./Intro.js";
+import GameSwitch from "./GameSwitch";
+import GameSwirl from "./GameSwirl";
+import GameBreak from "./GameBreak";
+import StartGame from "./StartGame";
 
 const Game = ({ name, time, completedGame }) => {
   switch (name) {
@@ -13,7 +13,7 @@ const Game = ({ name, time, completedGame }) => {
     case "switch":
       return <GameSwitch time={time} completedGame={completedGame} />;
     default:
-      return <Intro />;
+      return <StartGame />;
   }
 };
 

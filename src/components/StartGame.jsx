@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Intro.css";
-import logo from "../assets/Yin_yang.svg.png";
+import logo from "../assets/ying-yang.png";
 
-class Intro extends Component {
+class StartGame extends Component {
   render() {
     return (
       <header className="center intro-component">
@@ -35,4 +35,4 @@ class Intro extends Component {
   }
 }
 
-export default Intro;
+export default StartGame;

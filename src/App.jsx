@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React, { Component } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { Switch, Route } from "react-router-dom";
 
-import Game from './components/Game.js';
-import Intro from './components/Intro.js';
-import SelectGame from './components/SelectGame.js';
-import SelectTime from './components/SelectTime.js';
-import Reflection from './components/Reflection.js';
+import Game from "./components/Game";
+import StartGame from "./components/StartGame";
+import SelectGameType from "./components/SelectGameType";
+import SelectGameDuration from "./components/SelectGameDuration";
+import StartAgain from "./components/StartAgain";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: 'intro',
+      currentPage: "intro",
       totalTime: 0, //milliseconds
     };
 
@@ -22,13 +22,13 @@ class App extends Component {
   completedGame(totalTime) {
     this.setState({
       totalTime: this.state.totalTime + totalTime,
-      currentPage: 'reflection',
+      currentPage: "reflection",
     });
   }
 
   render() {
     return (
-      <Router>
+      <React.Fragment>
         <div className="app">
           <Route
             render={({ location }) => {
@@ -44,28 +44,28 @@ class App extends Component {
                         exact
                         path="/"
                         render={() =>
-                          this.state.currentPage === 'intro' ? (
-                            <Intro />
+                          this.state.currentPage === "intro" ? (
+                            <StartGame />
                           ) : (
-                            <Reflection totalTime={this.state.totalTime} />
+                            <StartAgain totalTime={this.state.totalTime} />
                           )
                         }
                       />
                       <Route
                         exact
                         path="/games"
-                        render={() => <SelectGame />}
+                        render={() => <SelectGameType />}
                       />
                       <Route
                         exact
                         path="/:game"
                         render={({ match }) =>
-                          ['swirl', 'break', 'switch'].includes(
+                          ["swirl", "break", "switch"].includes(
                             match.params.game
                           ) ? (
-                            <SelectTime game={match.params.game} />
+                            <SelectGameDuration game={match.params.game} />
                           ) : (
-                            <Intro />
+                            <StartGame />
                           )
                         }
                       />
@@ -73,10 +73,10 @@ class App extends Component {
                         exact
                         path="/:game/:time"
                         render={({ match }) =>
-                          ['swirl', 'break', 'switch'].includes(
+                          ["swirl", "break", "switch"].includes(
                             match.params.game
                           ) ? (
-                            typeof Number(match.params.time) === 'number' &&
+                            typeof Number(match.params.time) === "number" &&
                             Number(match.params.time) > 0 ? (
                               <Game
                                 name={match.params.game}
@@ -84,14 +84,14 @@ class App extends Component {
                                 completedGame={this.completedGame}
                               />
                             ) : (
-                              <SelectTime game={match.params.game} />
+                              <SelectGameDuration game={match.params.game} />
                             )
                           ) : (
-                            <Intro />
+                            <StartGame />
                           )
                         }
                       />
-                      <Route path="*" render={() => <Intro />} />
+                      <Route path="*" render={() => <StartGame />} />
                     </Switch>
                   </CSSTransition>
                 </TransitionGroup>
@@ -99,7 +99,7 @@ class App extends Component {
             }}
           />
         </div>
-      </Router>
+      </React.Fragment>
     );
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
-import GameSwitch from "./GameSwitch";
-import GameSwirl from "./GameSwirl";
-import GameBreak from "./GameBreak";
+import GameSwitch from "./Switch";
+import GameSwirl from "./Swirl";
+import GameBreak from "./Break";
 import StartGame from "./StartGame";
 
 const Game = ({ name, time, completedGame }) => {

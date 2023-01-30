@@ -17,12 +17,11 @@ header p {
   margin-bottom: 20px;
 }
 
-.zen-zone-intro {
-  width: 400px;
+.meditation-intro {
+  width: 600px;
 }
 
 @media only screen and (max-width: 700px) {
-
   .intro-component {
     width: 100%;
     flex-direction: column;
@@ -38,13 +37,11 @@ header p {
     padding-bottom: 20px;
   }
 
-  .zen-zone-intro {
+  .meditation-intro {
     width: 100%;
   }
 
   header h1 {
     font-size: 22px;
   }
-
 }
-   

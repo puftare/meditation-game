@@ -12,14 +12,14 @@ class Reflection extends Component {
     return (
       <header className="center intro-component">
         <img src={logo} className="App-logo" alt="The Meditation Game" />
-        <div className="zen-zone-intro">
+        <div className="meditation-intro">
           <h1>Nice !</h1>
           <p>
             You have been meditating with us for <b>{totalMinutes}</b> minutes
             and <b>{remainingSeconds}</b> seconds.
           </p>
           <Link to="/games">
-            <button>Let's do some more?</button>
+            <button>More?</button>
           </Link>
         </div>
       </header>

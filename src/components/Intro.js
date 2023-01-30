@@ -8,7 +8,7 @@ class Intro extends Component {
     return (
       <header className="center intro-component">
         <img src={logo} className="App-logo" alt="The Meditation Game" />
-        <div className="zen-zone-intro">
+        <div className="meditation-intro">
           <h1>Welcome to The Meditation Game.</h1>
           <p>
             A minimalistic meditation game built by{" "}

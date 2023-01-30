@@ -1,19 +1,19 @@
 .switch-box {
-  width: 470px;
-  height: 380px;
+  width: 700px;
+  height: 700px;
 }
 
 .switch {
   display: inline-block;
-  margin: 8px;
+  margin: 12px;
 }
 
 .switch .slider {
   position: relative;
-  display: inline-block;
-  height: 6px;
-  width: 24px;
-  border-radius: 6px;
+  display: block;
+  height: 20px;
+  width: 52px;
+  border-radius: 5px;
   cursor: pointer;
   background: #c5c5c5;
   transition: all 0.2s ease;
@@ -22,14 +22,14 @@
 .switch .slider:after {
   background: #eeeeee;
   position: absolute;
-  left: -6px;
-  top: -6px;
+  left: -2px;
+  top: -5px;
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
-  content: '';
+  content: "";
   transition: all 0.2s ease;
 }
 
@@ -43,7 +43,7 @@
   margin-left: 6px;
 }
 .switch .input:checked ~ .slider:after {
-  left: 12px;
+  left: 24px;
 }
 .switch .input:checked ~ .slider {
   background: #7be8a7;
@@ -53,7 +53,6 @@
 }
 
 @media only screen and (max-width: 700px) {
-
   .switch {
     margin: 6px;
   }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Intro.css";
-import logo from "../assets/Yin_yang.svg.png";
+import logo from "../assets/ying-yang.png";
 
 class StartAgain extends Component {
   render() {

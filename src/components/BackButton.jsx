@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/Yin_yang.svg.png";
+import logo from "../assets/ying-yang.png";
 
 const BackButton = ({ endGame }) => (
   <Link to="/">

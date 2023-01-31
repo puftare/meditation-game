@@ -50,7 +50,7 @@ button {
   font-family: inherit;
   font-size: 20px;
   padding: 13px 20px;
-  border-radius: 5px;
+  border-radius: 25px;
   color: white;
   background: linear-gradient(135deg, #ffffff 0%, #000000 100%);
   border: 0px;
@@ -68,9 +68,10 @@ button:hover {
 .section-options button {
   width: 200px;
   height: 200px;
-  border-radius: 100%;
   margin: 10px;
-  font-size: 24px;
+  font-size: 22px;
+  font-weight: 700;
+  color: aliceblue;
 }
 
 .back {

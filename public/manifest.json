@@ -1,10 +1,10 @@
 {
-  "short_name": "The Zen Zone",
-  "name": "The Zen Zone",
+  "short_name": "meditation-game",
+  "name": "The Meditation Game",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "./med.ico",
+      "sizes": "64x64 48x48 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
   ],
